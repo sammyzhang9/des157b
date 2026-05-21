@@ -1,29 +1,17 @@
 (function() {
     'use strict';
 
-    const button = document.querySelector('button');
-    const body = document.querySelector('body');
-    const banner = document.querySelector('#banner');
-    const sections = document.querySelectorAll('section')
-    let mode = 'dark';
+    const button = document.getElementById('switch');
+    const body = document.body;
+    const menuGroups = document.querySelectorAll('.menu-group');
 
     button.addEventListener('click', function() {
-        if (mode === 'dark') {
-            body.className = 'switch';
-            banner.className = 'switch';
-            button.className = 'switch';
-            for (const section of sections) {
-                section.className = 'switch';
-            }
-            mode = 'light';
-        } else {
-            body.removeAttribute('class');
-            banner.removeAttribute('class');
-            button.removeAttribute('class');
-            for (const section of sections) {
-                section.removeAttribute('class');
-            }
-            mode = 'dark'
+        const isLight = body.classList.toggle('switch');
+
+        button.classList.toggle('switch', isLight);
+
+        for (const group of menuGroups) {
+            group.classList.toggle('switch', isLight);
         }
-    })
-})()
+    });
+})();
