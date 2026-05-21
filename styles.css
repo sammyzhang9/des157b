@@ -63,8 +63,8 @@ span {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 2px;
-    width: 2px;
+    height: 1px;
+    width: 1px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1);
@@ -76,9 +76,9 @@ span::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 120px;
+    width: 100px;
     height: 1px;
-    background: linear-gradient(90deg, #fff, transparent);
+    background: linear-gradient(90deg, #c1d9ff6c, transparent);
 }
 
 @keyframes animate {
@@ -138,7 +138,7 @@ span:nth-child(6) {
     animation-duration: 4s;
 }
 span:nth-child(7) {
-    top: 300px;
+    top: 0px;
     left: initial;
     right: 0px;
     animation-delay: 1.6s;
