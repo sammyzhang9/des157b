@@ -25,7 +25,7 @@ body {
     transition: background-image 2s ease, color 2s ease;
     overflow: hidden;
     background-image: 
-        url("images/starsbg.png"),
+        /* url("images/starsbg.png"), */
         linear-gradient(
         180deg,
          #080808 25.76%,
@@ -78,7 +78,7 @@ span::before {
     transform: translateY(-50%);
     width: 100px;
     height: 1px;
-    background: linear-gradient(90deg, #c1d9ff6c, transparent);
+    background: linear-gradient(90deg, #ebf2ff6c, transparent);
 }
 
 @keyframes animate {
@@ -344,3 +344,7 @@ nav ol, nav ul {
     border: none;
     color: #373E45;
 }
+
+canvas {
+    display: block;
+  }
