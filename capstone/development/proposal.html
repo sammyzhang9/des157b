@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Development — Proposal</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <aside class="sidebar">
+            <h1>Capstone Development - Proposal</h1>
+        </aside>
+
+        <main class="content">
+            <p>
+                This project relies most on speculative design and challenging mental models. Through speculative design, the project imagines a digital system where memories can be selected and interpreted. It asks “what if memory could become an interactive archive?” and “what if a website could reveal what kinds of moments a person values most?” The project also challenges mental models around memory. We often think of memory as something that simply happens to us, or as a collection of moments stored in our minds. This project reframes memory as something selective and designed through choice. The user cannot keep every memory, which reflects the reality that remembering always involves forgetting. Data visualization appears in the final part of the experience. Each saved memory would be tagged with emotional traits such as friendship, comfort, adventure, joy, quietness, or belonging. At the end, the user’s chosen memories generate a small reflection about what they value. A possible final screen could also show collective anonymous data, such as which emotional traits are most commonly preserved across users, what types of memories are most often saved, or which ones are most often forgotten.
+            </p>
+            <p>
+                This project relies most on speculative design and challenging mental models. Through speculative design, the project imagines a digital system where memories can be selected and interpreted. It asks “what if memory could become an interactive archive?” and “what if a website could reveal what kinds of moments a person values most?” The project is not meant to be a realistic memory product, but rather a poetic and speculative experience about how people choose what to remember. The project also challenges mental models around memory. We often think of memory as something that simply happens to us, or as a collection of moments stored in our minds. This project reframes memory as something selective and designed through choice. The user cannot keep every memory, which reflects the reality that remembering always involves forgetting. Data visualization appears in the final part of the experience. Each saved memory would be tagged with emotional traits such as friendship, comfort, adventure, joy, quietness, or belonging. At the end, the user’s chosen memories generate a small reflection about what they value. A possible final screen could also show collective anonymous data, such as which emotional traits are most commonly preserved across users, what types of memories are most often saved, or which ones are most often forgotten.
+            </p>
+            <p>
+                The experience would begin with a minimal introduction screen that explains the rules: the user will move through a set of memories, but they may only keep a limited number, likely three to five. This gives the interaction emotional stakes from the beginning. The introduction might say something like, “Some memories stay. Others fade. You may only keep five.” The main feature would be a memory carousel. Each memory would appear one at a time with a timestamp, a soft image or visual scene, and a short text line to give context. The memory would start out mostly clear, then gradually blur over three to five seconds. The user would have to decide quickly whether to save it by clicking a button such as “fold this memory.” If they click it, the memory transforms into a folded paper star. If they do nothing, the memory fades away and cannot be recovered. Another feature would be the saved memory collection. As users choose memories, they collect folded stars. These stars represent compressed emotional fragments of the moments they chose to keep. At the end of the experience, the saved stars float into a glass jar. This jar becomes the user’s personal memory archive.
+            </p>
+            <p>
+                For interactions and JavaScript libraries, I imagine using JavaScript to control the carousel, memory timer, blur effect, saved-memory limit, and final trait calculation. CSS transitions could support the gradual blur and fade effects. GSAP could be useful for smoother animations, especially when a memory folds into a star or when the stars float into the jar. If I decide to include the collective data screen, I could use simple JavaScript to create a small visualization of the most common memory traits. I could also use local storage to remember which memories a user selected during the session.
+            </p>
+            <p>
+                One challenge is figuring out the right timing. If each memory disappears too quickly, the user might feel stressed rather than reflective. If the memory stays for too long, the idea of forgetting may not feel strong enough. I currently imagine each memory lasting around three to five seconds before it fully blurs, but I may need to test this to make sure the interaction feels emotional rather than frustrating.
+            </p>
+            <p>
+                The target audience is young adults who are going through periods of transition. This includes people leaving home, moving away for school, graduating, changing friendships, or realizing that certain stages of life are beginning to feel distant. I want this audience to think about how temporary moments can become meaningful later, and how growing up often means learning that not everything can be preserved.
+            </p>
+        </main>
+
+    </div>
+
+</body>
+
+</html>
