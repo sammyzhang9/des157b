@@ -23,7 +23,8 @@ body {
     font-style: normal;
     color: #FFFFFF;
     transition: background-image 2s ease, color 2s ease;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     background-image: 
         /* url("images/starsbg.png"), */
         linear-gradient(
@@ -355,8 +356,8 @@ nav ol, nav ul {
     pointer-events: none;
 }
 
-/* tablet: two-column menu */
-@media (max-width: 1024px) {
+/* tablet/laptop: two-column menu */
+@media (max-width: 1200px) {
     body {
         overflow-x: hidden;
         overflow-y: auto;
@@ -367,6 +368,7 @@ nav ol, nav ul {
         flex-direction: column;
         padding: 2em 1.5em 3em;
         gap: 2em;
+        min-height: auto;
     }
 
     header {
@@ -386,6 +388,7 @@ nav ol, nav ul {
         left: auto;
         right: auto;
         width: 100%;
+        top: auto;
         gap: 2.5em;
     }
 
@@ -426,4 +429,9 @@ nav ol, nav ul {
         min-height: 44px;
         padding: 0.5em 0;
     }
+}
+
+button,
+a {
+    touch-action: manipulation;
 }
