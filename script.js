@@ -59,4 +59,8 @@ draw();
 window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  for (let star of stars) {
+    star.x = Math.random() * canvas.width;
+    star.y = Math.random() * canvas.height;
+  }
 });
