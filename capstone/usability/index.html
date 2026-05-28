@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Memory Jar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="memories.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="experience">
+
+        <section class="intro-screen screen" id="intro-screen" data-screen="intro" aria-hidden="false">
+            <div class="intro-screen__content">
+                <div class="intro-screen__copy">
+                    <p>some things only stay if you choose them</p>
+                    <p>you won&rsquo;t be able to keep everything</p>
+                    <p>some memories disappear when you hesitate</p>
+                </div>
+                <button type="button" class="intro-screen__cta" id="open-jar-btn">open the jar</button>
+            </div>
+        </section>
+
+        <section class="memory-screen screen" id="memory-screen" data-screen="memory" aria-hidden="true" hidden>
+            <p class="memory-screen__timestamp" id="memory-timestamp"></p>
+            <p class="memory-screen__phrase" id="memory-phrase"></p>
+
+            <div class="memory-carousel" aria-live="polite">
+                <div class="memory-carousel__side memory-carousel__side--prev" id="memory-prev" aria-hidden="true">
+                    <img src="" alt="">
+                </div>
+                <div class="memory-carousel__main" id="memory-main">
+                    <div class="memory-carousel__image-wrap" id="memory-image-wrap">
+                        <img class="memory-carousel__image" id="memory-image" src="" alt="">
+                    </div>
+                    <div class="memory-carousel__fold-star" id="fold-star" hidden aria-hidden="true"></div>
+                </div>
+                <div class="memory-carousel__side memory-carousel__side--next" id="memory-next" aria-hidden="true">
+                    <img src="" alt="">
+                </div>
+            </div>
+
+            <div class="memory-screen__actions">
+                <button type="button" class="memory-screen__fold-btn" id="fold-memory-btn">fold this memory</button>
+                <button type="button" class="memory-screen__let-go-btn" id="let-it-go-btn">let it go</button>
+            </div>
+
+            <footer class="memory-screen__footer">
+                <p class="memory-screen__progress" id="memory-progress">0/5</p>
+                <p class="memory-screen__hint">
+                    <img src="images/star-icon.svg" alt="" class="memory-screen__hint-star" width="10" height="10">
+                    <span>you might start to forget things once you close them</span>
+                </p>
+            </footer>
+        </section>
+
+        <section class="collected-screen screen" id="collected-screen" data-screen="collected" aria-hidden="true" hidden>
+            <div class="collected-screen__content">
+                <h2 class="collected-screen__title">memories collected</h2>
+                <p class="collected-screen__subtitle" id="collected-reflection"></p>
+                <div class="collected-screen__jar" id="collected-stars" aria-label="Saved memories"></div>
+                <ul class="collected-screen__list" id="collected-list"></ul>
+            </div>
+        </section>
+
+        <div class="usability-overlay" id="usability-overlay" role="dialog" aria-modal="true" aria-labelledby="overlay-heading">
+            <div class="usability-overlay__modal">
+                <button type="button" class="usability-overlay__close" id="overlay-close" aria-label="Close instructions">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                        <path d="M14 14L34 34M34 14L14 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="usability-overlay__body" id="overlay-heading">
+                    <p>You are a young adult moving through a collection of fleeting memories. Each memory will only stay clear for a short amount of time before it begins to blur and fade. You can choose to &ldquo;fold&rdquo; a memory if you want to keep it, but you will only be able to save a limited number.</p>
+                    <p>During this user test, please try to complete these tasks:</p>
+                    <ol>
+                        <li>Move through the memory carousel and notice how each memory changes over time.</li>
+                        <li>Choose which memories you want to keep before they disappear.</li>
+                        <li>Try to understand what happens when you click &ldquo;fold this memory.&rdquo;</li>
+                        <li>Reach the final jar screen and look at the reflection based on the memories you saved.</li>
+                    </ol>
+                    <p>As you explore, pay attention to whether the experience feels clear, emotional, and easy to understand.</p>
+                    <p>When you are ready, begin the experience and do what the page prompts you to do.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
