@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Memory Jar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="memories.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="experience">
+
+        <section class="intro-screen screen" id="intro-screen" data-screen="intro" aria-hidden="false">
+            <div class="intro-screen__content">
+                <div class="intro-screen__copy">
+                    <p>some things only stay if you choose them</p>
+                    <p>you won&rsquo;t be able to keep everything</p>
+                    <p>some memories disappear when you hesitate</p>
+                </div>
+                <button type="button" class="intro-screen__cta" id="open-jar-btn">open the jar of memories</button>
+            </div>
+        </section>
+
+        <section class="memory-screen screen" id="memory-screen" data-screen="memory" aria-hidden="true" hidden>
+            <div class="memory-screen__viewport">
+                <div class="memory-screen__content" id="memory-content">
+                    <p class="memory-screen__timestamp" id="memory-timestamp"></p>
+                    <p class="memory-screen__phrase" id="memory-phrase"></p>
+
+                    <div class="memory-carousel" aria-live="polite">
+                        <div class="memory-carousel__side memory-carousel__side--prev" id="memory-prev" aria-hidden="true">
+                            <img src="" alt="">
+                        </div>
+                        <div class="memory-carousel__main" id="memory-main">
+                            <div class="memory-carousel__image-wrap" id="memory-image-wrap">
+                                <img class="memory-carousel__image" id="memory-image" src="" alt="">
+                            </div>
+                        </div>
+                        <div class="memory-carousel__side memory-carousel__side--next" id="memory-next" aria-hidden="true">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="memory-screen__actions">
+                <button type="button" class="memory-screen__fold-btn" id="fold-memory-btn">remember</button>
+                <button type="button" class="memory-screen__let-go-btn" id="let-it-go-btn">let it go</button>
+            </div>
+
+            <footer class="memory-screen__footer">
+                <p class="memory-screen__position" id="memory-position">1/13</p>
+                <p class="memory-screen__progress" id="memory-progress">0/5</p>
+            </footer>
+        </section>
+
+        <section class="collected-screen screen" id="collected-screen" data-screen="collected" aria-hidden="true" hidden>
+            <div class="collected-screen__content">
+                <section class="collected-screen__section collected-screen__section--kept" aria-labelledby="collected-kept-heading">
+                    <div class="collected-screen__section-header">
+                        <h2 class="collected-screen__heading" id="collected-kept-heading">
+                            <span class="collected-screen__heading-prefix">what you </span>
+                            <span class="collected-screen__heading-emphasis">kept</span>
+                        </h2>
+                        <p class="collected-screen__summary" id="collected-kept-reflection"></p>
+                        <div class="collected-screen__traits" id="collected-traits" aria-label="Traits in your saved memories"></div>
+                    </div>
+                    <ul class="collected-screen__list" id="collected-list"></ul>
+                </section>
+
+                <section class="collected-screen__section collected-screen__section--let-go" aria-labelledby="collected-let-go-heading">
+                    <h2 class="collected-screen__heading" id="collected-let-go-heading">
+                        <span class="collected-screen__heading-prefix">what you </span>
+                        <span class="collected-screen__heading-emphasis">let go</span>
+                    </h2>
+                    <div class="collected-screen__let-go-copy">
+                        <p class="collected-screen__reflection" id="collected-let-go-reflection"></p>
+                        <p class="collected-screen__closing" id="collected-closing"></p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
