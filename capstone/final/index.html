@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css">
     <script src="memories.js" defer></script>
     <script src="script.js" defer></script>
 </head>
@@ -28,7 +28,8 @@
             </div>
         </section>
 
-        <section class="memory-screen screen" id="memory-screen" data-screen="memory" aria-hidden="true" hidden>
+        <section class="memory-screen screen" id="memory-screen" data-screen="memory" hidden>
+            <h2 class="visually-hidden">memories</h2>
             <div class="memory-screen__viewport">
                 <div class="memory-screen__content" id="memory-content">
                     <p class="memory-screen__timestamp" id="memory-timestamp"></p>
@@ -36,15 +37,15 @@
 
                     <div class="memory-carousel" aria-live="polite">
                         <div class="memory-carousel__side memory-carousel__side--prev" id="memory-prev" aria-hidden="true">
-                            <img src="" alt="">
+                            <img src="images/memory-side.jpg" alt="">
                         </div>
                         <div class="memory-carousel__main" id="memory-main">
                             <div class="memory-carousel__image-wrap" id="memory-image-wrap">
-                                <img class="memory-carousel__image" id="memory-image" src="" alt="">
+                                <img class="memory-carousel__image" id="memory-image" src="images/neighborhood.png" alt="">
                             </div>
                         </div>
                         <div class="memory-carousel__side memory-carousel__side--next" id="memory-next" aria-hidden="true">
-                            <img src="" alt="">
+                            <img src="images/memory-side.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -61,7 +62,7 @@
             </footer>
         </section>
 
-        <section class="collected-screen screen" id="collected-screen" data-screen="collected" aria-hidden="true" hidden>
+        <section class="collected-screen screen" id="collected-screen" data-screen="collected" hidden>
             <div class="collected-screen__content">
                 <section class="collected-screen__section collected-screen__section--kept" aria-labelledby="collected-kept-heading">
                     <div class="collected-screen__section-header">
@@ -70,7 +71,7 @@
                             <span class="collected-screen__heading-emphasis">kept</span>
                         </h2>
                         <p class="collected-screen__summary" id="collected-kept-reflection"></p>
-                        <div class="collected-screen__traits" id="collected-traits" aria-label="Traits in your saved memories"></div>
+                        <div class="collected-screen__traits" id="collected-traits" role="group" aria-label="Traits in your saved memories"></div>
                     </div>
                     <ul class="collected-screen__list" id="collected-list"></ul>
                 </section>
