@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #111;
+}
+
+.archive {
+  width: 1200px;
+  max-width: 1200px;
+  height: 750px;
+  max-height: 750px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2.5rem 1.5rem;
+}
+
+/* Top metadata: stars + review */
+
+.metadata {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.star {
+  width: 11px;
+  height: 11px;
+  display: block;
+}
+
+.star--filled path {
+  fill: #e8a4b8;
+}
+
+.star--empty path {
+  fill: #e8d4dc;
+}
+
+.review {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: rgba(60, 60, 60, 0.55);
+  letter-spacing: 0.01em;
+}
+
+/* Film reel */
+
+.reel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+.nav {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.nav:hover {
+  color: rgba(0, 0, 0, 0.75);
+  border-color: rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.reel__viewport {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  height: 315px;
+}
+
+.reel__track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 100%;
+  will-change: transform;
+  transition: transform 0.55s ease;
+}
+
+.reel__item {
+  flex-shrink: 0;
+  width: 340px;
+  padding: 0;
+  border: none;
+  background: none;
+  opacity: 0.38;
+  cursor: pointer;
+  transition: opacity 0.25s ease, width 0.55s ease;
+}
+
+.reel__item.is-active {
+  width: 560px;
+  opacity: 1;
+  cursor: default;
+  pointer-events: none;
+}
+
+.reel__item:hover:not(.is-active) {
+  opacity: 0.55;
+}
+
+.reel__item video {
+  display: block;
+  width: 100%;
+  height: 315px;
+  object-fit: cover;
+  border-radius: 2px;
+  background: #e8e6e0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.reel__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.reel__fade--left {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.reel__fade--right {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 0%, rgba(253, 252, 248, 0) 100%);
+}
+
+/* Title, timeline, date */
+
+.title {
+  margin: 1rem 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 14px;
+  min-height: 22px;
+}
+
+.timeline__tick {
+  position: relative;
+  width: 1px;
+  height: 12px;
+  padding: 0;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  transition: height 0.3s ease, background 0.2s ease;
+}
+
+.timeline__tick:hover {
+  background: #888;
+}
+
+.timeline__tick.is-active {
+  height: 22px;
+  background: #111;
+}
+
+.timeline__tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  white-space: nowrap;
+  color: rgba(40, 40, 40, 0.85);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.timeline__tick:hover .timeline__tooltip {
+  opacity: 1;
+}
+
+.date {
+  margin: 0.5rem 0 0;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(60, 60, 60, 0.5);
+}
+
+.reflection {
+  margin: auto 0 0;
+  max-width: 32rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+  color: rgba(60, 60, 60, 0.35);
+}
+
+.archive--error .reflection {
+  color: rgba(120, 40, 40, 0.7);
+}

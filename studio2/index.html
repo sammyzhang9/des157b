@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>Movies I've Watched</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <main class="archive">
+    <header class="metadata">
+      <div class="rating" id="rating" role="img" aria-label="Rating"></div>
+      <p class="review" id="review"></p>
+    </header>
+
+    <div class="reel">
+      <button class="nav nav--prev" type="button" aria-label="Previous movie">←</button>
+      <div class="reel__viewport">
+        <div class="reel__fade reel__fade--left" aria-hidden="true"></div>
+        <div class="reel__fade reel__fade--right" aria-hidden="true"></div>
+        <div class="reel__track" id="reel-track"></div>
+      </div>
+      <button class="nav nav--next" type="button" aria-label="Next movie">→</button>
+    </div>
+
+    <h1 class="title" id="title"></h1>
+
+    <div class="timeline" id="timeline" role="tablist" aria-label="Watch history"></div>
+    <p class="date" id="date"></p>
+
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Obsession",
+    "watchedDate": "May 29, 2026",
+    "rating": 4,
+    "review": "I watched the entire movie on tiktok before going in the theater so I could be ready for the jumpscares",
+    "videoSrc": "videos/obsession.mp4"
+  },
+  {
+    "id": 2,
+    "title": "Michael",
+    "watchedDate": "May 28, 2026",
+    "rating": 3.5,
+    "review": "Hee Hee",
+    "videoSrc": "videos/Michael.mp4"
+  },
+  {
+    "id": 3,
+    "title": "Scott Pilgrim vs. the World",
+    "watchedDate": "May 12, 2026",
+    "rating": 5,
+    "review": "I unironically listen to Brie Larson's version of Black Sheep",
+    "videoSrc": "videos/scott-pilgrim.mp4"
+  },
+  {
+    "id": 4,
+    "title": "The Proposal",
+    "watchedDate": "May 09, 2026",
+    "rating": 2.5,
+    "review": "it was kinda good and also kinda terrible",
+    "videoSrc": "videos/the-proposal.mp4"
+  },
+  {
+    "id": 5,
+    "title": "Project Hail Mary",
+    "watchedDate": "May 01, 2026",
+    "rating": 4,
+    "review": "two thumbs up",
+    "videoSrc": "videos/project-hail-mary.mp4"
+  },
+  {
+    "id": 6,
+    "title": "17 Again",
+    "watchedDate": "Apr 9, 2026",
+    "rating": 2,
+    "review": "when will zac efron stop playing basketball",
+    "videoSrc": "videos/17-again.mp4"
+  },
+  {
+    "id": 7,
+    "title": "Eternity",
+    "watchedDate": "Apr 09, 2026",
+    "rating": 5,
+    "review": "I pick Clarke",
+    "videoSrc": "videos/eternity.mp4"
+  },
+  {
+    "id": 8,
+    "title": "21 Jump Street",
+    "watchedDate": "Apr 08, 2026",
+    "rating": 3.5,
+    "review": "IT RHYMES WITH GRAPE",
+    "videoSrc": "videos/21-jump-street.mp4"
+  },
+  {
+    "id": 9,
+    "title": "The Drama",
+    "watchedDate": "Apr 07, 2026",
+    "rating": 4,
+    "review": "insanity",
+    "videoSrc": "videos/the-drama.mp4"
+  },
+  {
+    "id": 10,
+    "title": "The Devil Wears Prada",
+    "watchedDate": "Mar 28, 2026",
+    "rating": 4,
+    "review": "I'm so so ready to work for the most ruthless boss ever",
+    "videoSrc": "videos/the-devil-wears-prada.mp4"
+  }
+]
